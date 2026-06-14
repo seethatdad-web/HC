@@ -20,6 +20,8 @@ jobs:
 
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v3
+      with:
+        gradle-version: '8.1.4' # Фиксируем рабочую версию, чтобы сервер не брал ломающую 9.5.1
 
     - name: Build with Gradle
       run: gradle assembleDebug
